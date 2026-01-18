@@ -13,6 +13,7 @@ class Solution {
                 right--;
             }
         }
+
         return maxArea;
     }
 }
