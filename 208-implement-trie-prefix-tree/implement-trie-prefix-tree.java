@@ -10,13 +10,12 @@ class Trie {
     }
     
     public boolean search(String word) {
-        return root.search(word, 0);    
+        return root.search(word, 0);
     }
     
     public boolean startsWith(String prefix) {
         return root.startsWith(prefix, 0);
     }
-
     class Node {
         Node[] nodes;
         boolean isEnd;
@@ -36,6 +35,7 @@ class Trie {
             nodes[i].insert(word, idx + 1);
         }
 
+
         private boolean search(String word, int idx) {
             if (idx >= word.length()) return false;
             Node node = nodes[word.charAt(idx) - 'a'];
@@ -53,7 +53,6 @@ class Trie {
 
             return node.startsWith(prefix, idx + 1);
         }
-
     }
 }
 
